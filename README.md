@@ -35,7 +35,7 @@ pip install ultralytics opencv-python pyrealsense2 numpy
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/audrlo/human-following-robot.git
    cd follow
    ```
 
