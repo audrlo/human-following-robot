@@ -8,6 +8,15 @@ from dataclasses import dataclass
 from typing import List, Optional, Tuple
 import math
 
+roboclaw = Roboclaw("/dev/ttyACM0", 38400) # should this be /dev/ttyUSB0? and 38400?
+roboclaw.Open()
+
+address = 0x80
+
+result, version = roboclaw.ReadVersion(address) # version check to see if it's alive
+print("Success:", result) # should be 1
+print("Version:", version)
+
 @dataclass
 class PersonInfo:
     """Information about a detected person"""
